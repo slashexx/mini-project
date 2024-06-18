@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Pet Adoption Agency</title>
+    <link rel="stylesheet" href="./css/cont.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><img src="../public/img/images.png" alt="" /></div>
+        <div class="navpart">
+            <h4 onclick="window.location.href='/'"">Home</h4>
+            <h4 onclick="window.location.href='/pets'">Adopt now</h4>
+            <h4 onclick="window.location.href='/upforadoption'">Post-a-Pet</h4>
+            <h4 onclick="window.location.href='/about'">About us</h4>
+            <h4 onclick="window.location.href='/contact'">Contact Us</h4>
+        </div>
+        <button onclick="window.location.href='/signin'">Sign in</button>
+    </nav>    <br>
+    <div class="contact-container">
+        <h1>Contact us</h1>
+        <p>If you have any questions about our animals, the adoption process, or would like to make a donation, we would love to hear from you. You can reach us by phone, email, or by visiting one of our locations. We look forward to speaking with you.</p>
+        <form action="#" method="post">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Enter first name" required>
+
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Enter last name" required>
+
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+
+            <label for="subject">Subject *</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>2024 Pet Adoption Agency</p>
+    </footer>
+</body>
+
+</html>

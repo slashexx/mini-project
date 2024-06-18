@@ -8,7 +8,7 @@
     "start": "nodemon app.js"
   },
   "keywords": [],
-  "author": "Dhruv puri, Tanmay Srivastav, Teli mushera, ankitha",
+  "author": "Dhruv puri, Tanmay Srivastava, Teli mushera, ankitha",
   "license": "ISC",
   "repository": {
     "type": "git",

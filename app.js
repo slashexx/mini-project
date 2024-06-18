@@ -53,10 +53,6 @@ app.get('/signin', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
 
-app.get('/signup', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'signup.html'));
-});
-
 app.get('/pets/:id', async (req, res) => {
     const eventId = req.params.id;
     const eventDocRef = doc(db, "pets", eventId);
@@ -113,8 +109,3 @@ const port = 3000;
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-
-import { https } from 'firebase-functions';
-
-// Export the Firebase Function
-export const expyApp = https.onRequest(app);

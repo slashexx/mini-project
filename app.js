@@ -6,7 +6,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore,doc,  collection, getDocs, getDoc } from "firebase/firestore";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import replace from './modules/replaceTemplate.js';
-
+import morgan from 'morgan';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -27,6 +27,7 @@ const petCollection = collection(db, 'pets');
 
 const app = express();
 app.use(express.json());
+app.use(morgan);
 
 // __dirname resolution in ES modules
 const __filename = fileURLToPath(import.meta.url);

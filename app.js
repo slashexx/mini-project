@@ -7,6 +7,7 @@ import { getFirestore,doc,  collection, getDocs, getDoc } from "firebase/firesto
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import replace from './modules/replaceTemplate.js';
 
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyCRJsN2eueB7fGUitfTdIu5gDiwxyuAy_4",
@@ -105,7 +106,7 @@ app.use((err, req, res, next) => {
 });
 
 
-const port = 3000;
+const port = 5000;
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

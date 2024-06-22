@@ -27,7 +27,7 @@ const petCollection = collection(db, 'pets');
 
 const app = express();
 app.use(express.json());
-app.use(morgan);
+app.use(morgan('combined'));
 
 // __dirname resolution in ES modules
 const __filename = fileURLToPath(import.meta.url);

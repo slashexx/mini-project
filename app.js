@@ -6,7 +6,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore,doc,  collection, getDocs, getDoc } from "firebase/firestore";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import replace from './modules/replaceTemplate.js';
-import morgan from 'morgan';
+import { getChatResponse } from './gemini-pro.js'; // Import the chatbot function
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -29,7 +29,7 @@ const petCollection = collection(db, 'pets');
 
 const app = express();
 app.use(express.json());
-app.use(morgan('combined'));
+// app.use(morgan('combined'));
 
 // __dirname resolution in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -99,6 +99,18 @@ app.get('/pets', async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(500).send('Internal Server Error');
+  }
+});
+
+app.post('/api/chat', async (req, res) => {
+  const { message } = req.body;
+
+  try {
+      const chatResponse = await getChatResponse(message);
+      res.json({ text: chatResponse });
+  } catch (error) {
+      console.error('Error in chatbot request:', error);
+      res.status(500).send('Internal Server Error');
   }
 });
 

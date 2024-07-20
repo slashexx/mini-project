@@ -5,9 +5,9 @@
     left: 95% !important; /* Space from the right side of the viewport */
     width: 60px;
     height: 58px;    /* Dimensions of the chat header */
-    border-radius: 8px;
+    border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    /* background-color: #fdb473; */
+    background-color: #F9977B;
     z-index: 1000;   /*z-index to stay above other content */
     transition: all 0.3s ease; /* Smooth transition for opening/closing */
 }
